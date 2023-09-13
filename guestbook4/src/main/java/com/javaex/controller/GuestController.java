@@ -52,7 +52,7 @@ public class GuestController {
 			return "/WEB-INF/dFrom.jsp";
 		}
 		
-		@RequestMapping("/delete")
+		@RequestMapping(value="delete", method={RequestMethod.GET,RequestMethod.POST})
 		public String delete(@RequestParam("no") int no,
 							 @RequestParam("pw") String password) {
 			System.out.println("삭제 실행");
